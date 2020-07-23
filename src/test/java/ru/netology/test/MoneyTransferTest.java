@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class MoneyTransferTest {
 
         @Test
-        void shouldTransferMoneyBetweenOwnCardsV1() {
+        void shouldTransferMoneyBetweenOwnCards() {
         open("http://localhost:9999");
         val loginPage = new LoginPage();
 //    val loginPage = open("http://localhost:9999", LoginPage.class);
