@@ -4,6 +4,7 @@ import lombok.Value;
 
 public class DataHelper {
     public static AuthInfo authInfo;
+    private static AuthInfo original;
 
     private DataHelper() {}
 
@@ -18,6 +19,7 @@ public class DataHelper {
     }
 
     public static AuthInfo getOtherAuthInfo(AuthInfo original) {
+        DataHelper.original = original;
         return new AuthInfo("petya", "123qwerty");
     }
 
