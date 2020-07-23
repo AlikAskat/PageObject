@@ -3,6 +3,8 @@ package ru.netology.data;
 import lombok.Value;
 
 public class DataHelper {
+    public static AuthInfo authInfo;
+
     private DataHelper() {}
 
     @Value
@@ -25,6 +27,7 @@ public class DataHelper {
     }
 
     public static VerificationCode getVerificationCodeFor(AuthInfo authInfo) {
+        DataHelper.authInfo = authInfo;
         return new VerificationCode("12345");
     }
 }
