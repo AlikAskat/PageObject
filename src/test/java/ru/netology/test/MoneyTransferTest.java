@@ -13,10 +13,12 @@ public class MoneyTransferTest {
         void shouldTransferMoneyBetweenOwnCards() {
         open("http://localhost:9999");
         val loginPage = new LoginPage();
-//    val loginPage = open("http://localhost:9999", LoginPage.class);
         val authInfo = DataHelper.getAuthInfo();
+//        val authInfoOriginal = DataHelper.getOtherAuthInfo();
         val verificationPage = loginPage.validLogin(authInfo);
         val verificationCode = DataHelper.getVerificationCodeFor(authInfo);
         verificationPage.validVerify(verificationCode);
+
     }
+
 }
