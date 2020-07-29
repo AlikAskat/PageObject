@@ -9,7 +9,7 @@ public class LoginPage {
     public VerificationPage validLogin(DataHelper.AuthInfo info) {
         open("http://localhost:9999");
         $("[class=App_appContainer__3jRx1]");
-        $( "[name='login']" ).setValue( info.getLogin() );
+        $( "[#root > div > div > form > fieldset > div:nth-child(1) > span > span > span.input__box > input]" ).setValue( info.getLogin() );
         $( "[data-test-id='password'] input" ).setValue( info.getPassword() );
         $( "[data-test-id=action-login]" ).click();
         return new VerificationPage();
