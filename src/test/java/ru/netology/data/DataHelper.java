@@ -10,8 +10,8 @@ public class DataHelper {
 
     @Value
     public static class AuthInfo {
-        private String login;
-        private String password;
+        String login;
+        String password;
     }
 
     public static AuthInfo getAuthInfo() {
@@ -25,7 +25,7 @@ public class DataHelper {
 
     @Value
     public static class VerificationCode {
-        private String code;
+        String code;
     }
 
     public static VerificationCode getVerificationCodeFor(AuthInfo authInfo) {
