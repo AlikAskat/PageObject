@@ -9,16 +9,15 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class MoneyTransferTest {
 
-                @Test
-                void shouldTransferMoneyBetweenOwnCards() {
-                        open( "http://localhost:9999" );
-                        val loginPage = new LoginPage();
-//    val loginPage = open("http://localhost:9999", LoginPageV1.class);
-                        val authInfo = DataHelper.getAuthInfo();
-                        val verificationPage = loginPage.validLogin( authInfo );
-                        val verificationCode = DataHelper.getVerificationCodeFor( authInfo );
-                        verificationPage.validVerify( verificationCode );
-                }
+    @Test
+    void shouldTransferMoneyBetweenOwnCards() {
+        open( "http://localhost:9999" );
+        val loginPage = new LoginPage();
+        val authInfo = DataHelper.getAuthInfo();
+        val verificationPage = loginPage.validLogin( authInfo );
+        val verificationCode = DataHelper.getVerificationCodeFor( authInfo );
+        verificationPage.validVerify( verificationCode );
+    }
 
-        }
+}
 
