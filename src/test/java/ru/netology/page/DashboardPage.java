@@ -8,17 +8,22 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.impl.Html.text;
-import static java.lang.String.*;
+import static java.lang.String.valueOf;
 
 public class DashboardPage {
     private final ElementsCollection cards = $$(".list__item");
     private final String balanceStart = "баланс: ";
     private final String balanceFinish = " р.";
     public String id;
+    private Object DashboardPage;
+
 
     public DashboardPage() {
         SelenideElement heading = $( "[data-test-id='dashboard']" );
         heading.shouldBe(visible);
+    }
+    public void dashboardId() {
+        val dashboardPage = new DashboardPage();
     }
 
 //    public int getBalanceStart() {
