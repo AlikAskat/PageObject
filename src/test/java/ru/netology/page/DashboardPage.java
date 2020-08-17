@@ -11,9 +11,9 @@ import static com.codeborne.selenide.impl.Html.text;
 import static java.lang.String.*;
 
 public class DashboardPage {
-    private ElementsCollection cards = $$(".list__item");
-    private String balanceStart = "баланс: ";
-    private String balanceFinish = " р.";
+    private final ElementsCollection cards = $$(".list__item");
+    private final String balanceStart = "баланс: ";
+    private final String balanceFinish = " р.";
     private String id;
 
     public DashboardPage() {
