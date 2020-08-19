@@ -23,11 +23,16 @@ public class DashboardPage {
 
     public int getCardBalance(String id) {
         val text = cards.find(text(id)).getText();
-        $("[data-test-id='92df3f1c-a033-48e6-8390-206f6b1f56c0']").click();
-        $("[data-test-id='0f3f5c2a-249e-4c3d-8287-09f7a039391d']").click();
-        $("[class='money-input__currency']");
-        $("[placeholder='0000 0000 0000 0000']");
-        $("[value='**** **** ****']");
+//        val string = balanceStart.equals("[label='Сумма']");
+        $( byText( "Пополнить" ) ).click();
+        $("#root > div > form > fieldset > div:nth-child(1) > div > span > span > span.input__box > input").setValue( "100" );
+        $("#root > div > form > fieldset > div:nth-child(2) > span > span > span.input__box > input").setValue("'5559 0000 0000 0002");
+//        ("[data-test-id='amount']");
+//        ( "[data-test-id='92df3f1c-a033-48e6-8390-206f6b1f56c0']" );
+//        $("[data-test-id='0f3f5c2a-249e-4c3d-8287-09f7a039391d']").click();
+//        $("[class='money-input__currency']");
+//        $("[placeholder='0000 0000 0000 0000']");
+//        $("[value='**** **** ****']");
         $( byText( "Пополнить" ) ).click();
         return extractBalance(text);
     }
