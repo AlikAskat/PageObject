@@ -4,10 +4,26 @@ import lombok.Value;
 
 public class DataHelper {
     public static AuthInfo authInfo;
-    public static String firstCardBalance;
-    public static String secondCardBalance;
+    private static String firstCardBalance;
+    private static String secondCardBalance;
 
     private DataHelper() {}
+
+    public static String getFirstCardBalance() {
+        return firstCardBalance;
+    }
+
+    public static void setFirstCardBalance(String firstCardBalance) {
+        DataHelper.firstCardBalance = firstCardBalance;
+    }
+
+    public static String getSecondCardBalance() {
+        return secondCardBalance;
+    }
+
+    public static void setSecondCardBalance(String secondCardBalance) {
+        DataHelper.secondCardBalance = secondCardBalance;
+    }
 
     @Value
     public static class AuthInfo {
@@ -38,9 +54,27 @@ public class DataHelper {
     }
 
     public static CardBalance getCardBalance() {
-
-        return new CardBalance( firstCardBalance, secondCardBalance );
+        return new CardBalance("0001", "0002");
     }
+
+//    @Value
+//    public static class FirstCardBalance {
+//        firstCardBalance;
+//    }
+//
+//
+//    public static FirstCardBalance firstCardBalance() {
+//        return new FirstCardBalance();
+//    }
+//
+//    @Value
+//    public static class SecondCardBalance {
+//        secondCardBalance;
+//    }
+//
+//    public static SecondCardBalance secondCardBalance() {
+//        return new SecondCardBalance();
+//    }
 
 }
 
