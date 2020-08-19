@@ -4,6 +4,8 @@ import lombok.Value;
 
 public class DataHelper {
     public static AuthInfo authInfo;
+    public static String firstCardBalance;
+    public static String secondCardBalance;
 
     private DataHelper() {}
 
@@ -29,16 +31,16 @@ public class DataHelper {
     }
 
     @Value
-    public static class CardsNumber {
+    public static class CardBalance {
         String id;
         String text;
 
     }
 
-    public static CardsNumber getCardsNumber() {
-        return new CardsNumber( "**** **** **** 0001", "**** **** **** 0002" );
-    }
+    public static CardBalance getCardBalance() {
 
+        return new CardBalance( firstCardBalance, secondCardBalance );
+    }
 
 }
 
