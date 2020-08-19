@@ -17,7 +17,8 @@ public class MoneyTransferTest {
         val verificationPage = loginPage.validLogin( authInfo );
         val verificationCode = DataHelper.getVerificationCodeFor( authInfo );
         val dashboardPage = verificationPage.validVerify( verificationCode );
-        val firstCardBalance = dashboardPage.getCardBalance("**** **** **** 0001");
+        val firstCardBalance = dashboardPage.getCardBalance("0001");
+        val secondCardBalance = dashboardPage.getCardBalance("0002");
     }
 
 }
